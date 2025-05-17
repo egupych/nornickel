@@ -1,16 +1,21 @@
 @font-face {
+  font-family: 'sb';
+  src: url('/Fonts/ProximaNova-Semibold.woff') format('woff');
+}
+
+@font-face {
   font-family: 'b';
-  src: url('HelveticaNeueCyr-Bold.woff2') format('woff2');
+  src: url('/Fonts/ProximaNova-Bold.woff') format('woff2');
 }
 
 @font-face {
   font-family: 'l';
-  src: url('HelveticaNeueCyr-Light.woff2') format('woff2');
+  src: url('/Fonts/ProximaNova-Light.woff') format('woff');
 }
 
 @font-face {
   font-family: 'li';
-  src: url('HelveticaNeueCyr-LightItalic.woff2') format('woff2');
+  src: url('/Fonts/ProximaNova-LightIt.woff') format('woff');
 }
 
 @font-face {
@@ -25,7 +30,7 @@
 
 @font-face {
   font-family: 'r';
-  src: url('HelveticaNeueCyr-Roman.woff2') format('woff2');
+  src: url('/Fonts/ProximaNova-Regular.woff') format('woff2');
 }
 
 @font-face {
@@ -44,24 +49,35 @@
 }
 
 :root{
-  --first-color: #FFA90A;
-  --second-color: #004C97;
-  --background-color: #fdfdfd;
-  --background-color2: #F7F7F5;
+  --light-color: #ffffff;
+  --gray-color: #f3f4f8;
+  --darkgray-color: #d0d1d4;
+  --accent1-color: #0077C8;
+  --accent2-color: #DEEDF7;
+  --accent3-color: #F38B00;
+  --accent4-color: #004C97;
+  --dark-color:#1A1B25;
+
+  --light-gradient-color: linear-gradient(135deg, #ffffff, #ffffff57);
+  --dark-gradient-color: linear-gradient(135deg, #0963B7, #011856);
+
 }
 
 a {
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+}
 
 /* Основные стили */
 body {
   margin: 0;  /* Убираем стандартные отступы браузера */
   padding: 0;
   font-family: 'r', sans-serif;
-  background-color: var(--background-color);
-  font-size: 14px;
+  background-color: var(--light-color);
+  font-size: 0.88rem;
 
 }
 
@@ -79,7 +95,7 @@ body {
 
 @keyframes slideInFromTop {
   0% {
-    transform: translateY(-30px); /* Поднимаем, но чуть меньше */
+    transform: translateY(-1.88rem); /* Поднимаем, но чуть меньше */
     opacity: 0;
   }
   100% {
@@ -91,7 +107,7 @@ body {
 /* По умолчанию скрываем элементы */
 .part, h2, .description {
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(-1.88rem);
 }
 
 /* Запускаем анимацию, когда добавляется класс 'animate' */
@@ -132,14 +148,21 @@ body {
 header{
   display: flex;
   justify-content: center;
-  background-color: var(--second-color);
+  background-image: url('Images/Cover.png');
+  background-size: cover;      /* картинка масштабируется и заполняет блок */
+  background-position: center; /* центрируем картинку */
+  background-repeat: no-repeat;/* не повторяем картинку */
+  width: 100%;                 /* ширина блока (можно задать нужную) */
+  height: 100vh;               /* например, высота — весь экран */
+}
+
+.head_container {
+  position: relative;
   width: 100%;
-  margin: 0 auto;
 }
 
 .banner img{
   width: 100%;
-  max-width: 1440px;
   display: flex;
 }
 
@@ -149,30 +172,46 @@ header{
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 nav {
-	font-size: 12px;
-  font-family: 'm', sans-serif;
-  color: var(--background-color);
-	height: 80px;
-	width: 100%;
-  max-width: 1440px;
+	font-size: 0.88rem;
+  font-family: 'sb', sans-serif;
+  color: var(--light-color);
+	height: 5.00rem;
 	z-index: 0;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	user-select: none;
   position: absolute;
   flex-wrap: wrap;
 }
 
-.offer {
-  position: absolute;
-  left: 80px;
-  top: 148px;
+
+h1 {
+  font-family: 'l', sans-serif;
+  font-size: 7.50rem;
+  line-height: 120%;
+  background: linear-gradient(135deg, #ffffff, #ffffff57);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
+
+.offer p {
+  font-family: 'l', sans-serif;
+  font-size: 1.50rem;
+  line-height: 120%;
+  background: linear-gradient(135deg, #ffffff, #ffffff57);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 
 /* Логотип */
 .logo img {
-  width: 150px;
+  width: 9.38rem;
 }
 
 
@@ -180,20 +219,20 @@ nav {
 	display: flex;
 	cursor: pointer;
   justify-content: space-between;
-  gap: 40px;
+  gap: 2.50rem;
 }
 
 .link {
 	position: relative;
 	overflow: hidden;
-  padding: 3.2px 0;
+  padding: 0.20rem 0;
 }
 
 
 .linkline {
 	position: absolute;
 	display: block;
-  height: 2px;
+  height: 0.12rem;
 }
 
 .link:after {
@@ -202,8 +241,8 @@ nav {
 	bottom: 0;
 	right: 0;
 	width: 0%;
-	height: 1px;
-	background: var(--background-color);
+	height: 0.06rem;
+	background: var(--light-color);
 	transition: all 0.30s cubic-bezier(.47,.17,.3,1);
 }
 
@@ -213,21 +252,21 @@ nav {
 }
 
 .linkWhite {
-	margin-left: 48px;
+	margin-left: 3.00rem;
 	position: relative;
 	overflow: hidden;
-	padding: 8px 0;
+	padding: 0.50rem 0;
 	cursor: pointer;
 }
 
 .linkWhite:after {
 	content: "";
 	position: absolute;
-	bottom: 11px;
+	bottom: 0.69rem;
 	right: 0;
 	width: 0%;
-    height: 2px;
-    background: var(--background-color);
+    height: 0.12rem;
+    background: var(--light-color);
 	transition: all 0.3s cubic-bezier(.47,.17,.3,1);
 }
 
@@ -237,8 +276,8 @@ nav {
 }
 
 .container {
-  background-color: var(--background-color);
-  margin: 80px auto;
+  background-color: var(--light-color);
+  margin: 5.00rem auto;
 }
 
 .narrative {
@@ -248,49 +287,31 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  max-width: 1180px; /* Ширина сайта, чтобы не растягивалось */
+  max-width: 73.75rem; /* Ширина сайта, чтобы не растягивалось */
   margin: 0 auto; /* Центрирование */
   box-sizing: border-box; /* Включение padding в ширину */
 }
 
 .air 
 {
-  padding-top: 80px;
+  padding-top: 5.00rem;
 }
 
-.under_container {
-  background-color: var(--background-color2);
-  margin: 80px auto;
-}
-
-.under_narrative {
-  position: relative;
-  background-color: var(--background-color2);
-  padding: 40px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-
-  max-width: 1180px; /* Ширина сайта, чтобы не растягивалось */
-  margin: 0 auto; /* Центрирование */
-  box-sizing: border-box; /* Включение padding в ширину */
-}
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 1.25rem;
+  max-width: 75.00rem;
   margin: 0 auto;
-  padding: 63px 0px;
+  padding: 3.94rem 0.00rem;
 }
 
 .card {
-  background: var(--background-color2);
-  padding: 30px;
+  background: var(--light-color);
+  padding: 1.88rem;
   text-align: left;
-  transform: translateY(20px); /* Начальная позиция карточек */
+  transform: translateY(1.25rem); /* Начальная позиция карточек */
   transition: opacity 1s ease-out, transform 1s ease-out; /* Плавное изменение */
 }
 
@@ -331,24 +352,31 @@ nav {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.31rem);
 }
 
 .icon {
-  width: 60px;
+  width: 3.75rem;
+}
+
+.grid-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .card h3 {
   font-family: 'm', sans-serif;
-  font-size: 18px;
-  margin: 10px 0;
-  color: var(--second-color);
+  font-size: 1.12rem;
+  margin: 0.62rem 0;
+  color: var(--accent-color);
 }
 
 .card p {
-  font-size: 16px;
-  color: var(--second-color);
-  line-height: 1.6;
+  font-size: 1.00rem;
+  color: var(--accent-color);
+  line-height: 120%;
 }
 
 .content {
@@ -357,54 +385,57 @@ nav {
 }
 
 .text-slide {
-  padding: 10px 140px;
+  padding: 0.62rem 8.75rem;
   position: absolute;                  /* Абсолютное позиционирование */
-  bottom: 90px;                           /* Привязка к нижней границе */
+  bottom: 5.62rem;                           /* Привязка к нижней границе */
   left: 0;                             /* Привязка к левой стороне */
   width: 80%;                         /* Растягиваем на всю ширину */
 }
 
 .text-slide p {
   z-index: 2;
-  font-size: 18px;
+  font-size: 1.12rem;
   font-family: 'r', sans-serif;
-  line-height: 1.6;
+  line-height: 120%;
   text-align: left;
   z-index: 2; 
 }
 
 .part {
-  font-family: 'l', sans-serif;
-  font-size: 18px;
-  color: var(--second-color);
-  margin: 0 0 19px;
-
+  font-family: 'r', sans-serif;
+  font-size: 1.2rem;
+  color: var(--darkgray-color);
 }
 
 .title {
-  font-family: 't', sans-serif;
-  font-size: 60px;
-  color: var(--first-color);
-  line-height: 1;
-  margin: 0 0 27px;
-  letter-spacing: 4px;
+  font-family: 'r', sans-serif;
+  font-size: 4rem;
+  color: var(--accent4-color);
+  line-height: 100%;
+  margin: 0;
 }
 
 .under_title{
   font-family: 't', sans-serif;
-  font-size: 41px;
-  color: var(--first-color);
-  line-height: 1;
-  margin: 0 0 27px;
-  letter-spacing: 2px;
+  font-size: 2.56rem;
+  color: var(--dark-color);
+  line-height: 120%;
+  margin: 0 0 1.69rem;
+}
+
+.header-description {
+  font-family: 'b', sans-serif;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  line-height: 120%;
 }
 
 .description {
-  font-family: 'l', sans-serif;
-  font-size: 18px;
-  color: var(--second-color);
-  line-height: 1.6;
-  margin: 0 0 15px;
+  font-family: 'r', sans-serif;
+  font-size: 1rem;
+  color: var(--accent-color);
+  line-height: 120%;
+  margin: 0 0 0.94rem;
 }
 
 .background {
@@ -415,6 +446,18 @@ nav {
   background-size: cover;
   opacity: 1; /* Прозрачность */
   z-index: 1; /* За текстом */
+}
+
+.IMG {
+  width: 100%;
+  display: flex;
+  background-color: var(--darkgray-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .background2 {
@@ -429,15 +472,15 @@ nav {
 
 .postscriptum {
   font-family: 'l', sans-serif;
-  font-size: 18px;
-  color: var(--second-color);
-  line-height: 1.6;
+  font-size: 1.12rem;
+  color: var(--accent-color);
+  line-height: 120%;
 }
 
 .swiper {
   height: 120vh;
-  max-height: 810px;
-  max-width: 1440px;
+  max-height: 50.62rem;
+  max-width: 90.00rem;
 
 }
 
@@ -482,9 +525,9 @@ nav {
 }
 
 .swiper-slide p {
-  font-size: 18px;
+  font-size: 1.12rem;
   position: relative;
-  color: var(--background-color);
+  color: var(--light-color);
 }
 
 /* --- Кастомизация пагинации Swiper --- */
@@ -495,15 +538,15 @@ nav {
   align-items: center;
   width: 100%;
   z-index: 10;
-  margin-bottom: 50px;
+  margin-bottom: 3.12rem;
 }
 
 .swiper-pagination-bullet {
-  width: 16px !important; /* Размер кружков */
-  height: 16px !important;
+  width: 1.00rem !important; /* Размер кружков */
+  height: 1.00rem !important;
   background-color: rgba(0, 0, 0, 0.7) !important; /* Серый цвет */
   border-radius: 50% !important; /* Делаем их круглыми */
-  margin: 0 20px !important; /* Расстояние между кружками */
+  margin: 0 1.25rem !important; /* Расстояние между кружками */
   opacity: 0.7 !important; /* Прозрачность */
   transition: all 0.3s ease !important; /* Плавный переход эффектов */
 }
@@ -516,15 +559,15 @@ nav {
 
 /* Стили для активного элемента */
 .swiper-pagination-bullet-active {
-  background-color: var(--background-color) !important; /* Белый цвет активной точки */
+  background-color: var(--light-color) !important; /* Белый цвет активной точки */
   transform: scale(1.2); /* Увеличение активного элемента */
   opacity: 1 !important; /* Полная непрозрачность */
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 0.06rem solid rgba(0, 0, 0, 0.7);
 }
 
 /* Чтобы активная точка оставалась белой при наведении */
 .swiper-pagination-bullet-active:hover {
-  background-color: var(--background-color) !important; /* Оставляем белый цвет */
+  background-color: var(--light-color) !important; /* Оставляем белый цвет */
   transform: scale(1.2); /* Ещё большее увеличение при наведении */
 }
 
@@ -534,14 +577,14 @@ nav {
   color: #fff !important; /* Белый цвет стрелок */
   background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный чёрный фон */
   border-radius: 50%; /* Скругление для создания круга */
-  width: 50px !important; /* Ширина кнопки */
-  height: 50px !important; /* Высота кнопки */
+  width: 3.12rem !important; /* Ширина кнопки */
+  height: 3.12rem !important; /* Высота кнопки */
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.5s ease;
-  margin-left: 130px;
-  margin-right: 130px;
+  margin-left: 8.12rem;
+  margin-right: 8.12rem;
 }
 
 /* Эффект при наведении */
@@ -553,7 +596,7 @@ nav {
 /* Увеличиваем иконки стрелок */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 14px !important; /* Размер стрелки */
+  font-size: 0.88rem !important; /* Размер стрелки */
   font-weight: bold;
 }
 
@@ -567,274 +610,126 @@ nav {
 
 .quiz-container {
   margin: 0 auto;
-  padding: 40px;
+  padding: 2.50rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url('quiz-back.png') no-repeat center center;
-  background-size: cover;
+  background-color: var(--accent4-color);
+  width: 60rem;
+  border-radius: 2.2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 12rem;
 }
 
 .question-container p {
-  font-size: 34px;
-  font-family: 'm', sans-serif;
-  color: var(--background-color);
+  font-size: 2.12rem;
+  font-family: 'sb', sans-serif;
+  color: var(--light-color);
   text-align: center;
-  margin-bottom: 50px;
-  line-height: 130%;
+  margin-bottom: 3rem;
+  line-height: 120%;
 }
 
 .options-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .options-container img {
-  width: 36px;
+  width: 2.25rem;
 }
 
 .option, .option2, .option3 {
   background: transparent;
-  backdrop-filter: blur(10px); /* Размытие заднего плана */
-  border: 2px solid var(--background-color);
-  padding: 26px 30px;
-  padding-right: 50px;
-  border-radius: 100px;
-  font-size: 18px;
-  color: var(--background-color);
+  border: 0.12rem solid var(--light-color);
+  padding: 1.62rem 1.88rem;
+  padding-right: 3.12rem;
+  border-radius: 1.5rem 1.5rem 0rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--light-color);
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
+  min-width: 25rem;
+
 }
 
 .option:hover {
-  background: var(--first-color);
+  background: var(--accent1-color);
 }
 
 .option2:hover {
-  background: var(--first-color);
+  background: var(--accent1-color);
 }
 
 .option3:hover {
-  background: var(--first-color);
+  background: var(--accent1-color);
 }
 
 
 .feedback-container{
-  margin-top: 40px;
-  margin-bottom: 0px;
-  font-size: 18px;
-  color: var(--background-color);
+  margin-top: 2.50rem;
+  margin-bottom: 0.00rem;
+  font-size: 1.12rem;
+  color: var(--light-color);
   font-family: "li", sans-serif;
-  line-height: 30px;
+  line-height: 120%;
   text-align: center;
-  max-width: 850px;
+  max-width: 53.12rem;
 }
 
 .correct, .correct2, .correct3 {
-  background: #0081C9 !important;
+  background: var(--accent1-color);
 }
 
 .wrong, .wrong2, .wrong3 {
-  background: #dc3545 !important;
+  background: var(--accent3-color);
 }
-
-.quote1 {
-  font-family: 'l', sans-serif;
-  color: var(--first-color);
-  display: flex;
-  justify-content: center;
-  font-size: 36px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 0;
-  align-items: center;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.quote {
-  font-family: 'l', sans-serif;
-  color: var(--second-color);
-  display: flex;
-  justify-content: center;
-  font-size: 36px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 60px;
-  padding-top: 0;
-  align-items: center;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.quote img {
-  width: 40px;
-  margin-right: 28px;
-}
-
-.quiz {
-  font-family: 'l', sans-serif;
-  color: var(--second-color);
-  display: flex;
-  justify-content: center;
-  font-size: 36px;
-  padding-top: 20px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 60px;
-  align-items: center;
-  flex-direction: column;
-}
-
-.quiz div {
-  display: flex;
-  justify-content: center;
-}
-
-.quiz img {
-  width: 70px;
-  margin: 28px;
-}
-
-.button {
-  cursor: pointer;
-  background: var(--first-color);
-  color: var(--background-color);
-  padding: 7px 44px;
-  transition: .5s; 
-  margin-top: 10px;
-  border-radius: 4px;
-}
-
-.button__text p {
-  font-family: "m", sans-serif;
-  font-size: 18px;
-}
-
-.button:hover{
-  color: rgba(255, 255, 255, 0);
-}
-
-.button__text p {
-  font-family: "m", sans-serif;
-  font-size: 18px;
-}
-
-.button::after {
-  content: '';
-  position: absolute;
-  width: 80%;
-  height: 40%;
-  background: var(--first-color);
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  margin: 0 auto;
-  border-radius: 3em;
-  filter: blur(12px);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity .2s;
-}
-
-.button__text {
-  position: relative;
-  z-index: 10;
-}
-
-.button img {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  pointer-events: none;
-  transition: .4s;
-  opacity: 0;
-}
-
-.button__cone {
-  width: 16px;
-  transform: translate(-25px,-6px) rotate(55deg);
-  filter: blur(.5px);
-}
-
-.button__torus {
-  width: 32px;
-  transform: translate(7px,-14px) rotate(80deg);
-}
-
-.button__icosahedron {
-  width: 32px;
-  transform: translate(34px,-4px) rotate(-45deg);
-  filter: blur(.9px);
-}
-
-.button__sphere {
-  width: 26px;
-  transform: translate(-5px,15px) rotate(40deg);
-}
-
-.button:hover::after {
-  opacity: 1;
-}
-
-.button:hover{
-  transform: scale(1.2);
-}
-
-.button:hover img{
-  opacity: 1;
-}
-
-.button:hover .button__cone{
-  transform: translate(-38px,-10px) scale(1.1);
-}
-
-.button:hover .button__torus{
-  transform: translate(7px,-32px) scale(1.05);
-} 
-
-.button:hover .button__icosahedron{
-  transform: translate(50px,-20px) scale(1.05);
-}
-
-.button:hover .button__sphere{
-  transform: translate(-14px,20px) scale(1.05);
-}
-
 
 
 
 
 .footer {
-  color: var(--background-color);
+  color: var(--light-color);
   font-family: 'r', sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  padding: 58px 129px;
+  font-size: 0.88rem;
+  line-height: 120%;
+  padding: 3.62rem 8.06rem;
   max-width: 100%;
-  background-color: var(--second-color);
+  background-color: var(--accent4-color);
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .footer_age {
-  margin-top: 10px
+  margin-top: 0.5rem
 }
 
 /* Разделительная линия */
 .footer__line {
-  border-top: 1px solid var(--background-color);
-  margin-top: 40px;
-  margin-bottom: 25px;
+  border-top: 0.06rem solid var(--light-color);
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Нижняя часть */
@@ -843,14 +738,16 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  font-size: 14px;
-  color: var(--background-color);
+  font-size: 0.88rem;
+  color: var(--light-color);
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .footer__site a {
-  color: var(--background-color);
+  color: var(--light-color);
   text-decoration: none;
+
 }
 
 
@@ -861,21 +758,21 @@ nav {
 
 
 ::-webkit-scrollbar {
-  width: 10px; /* Ширина скроллбара */
-  background-color: var(--background-color2); 
+  width: 0.62rem; /* Ширина скроллбара */
+  background-color: var(--accent2-color); 
   transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--second-color);
+  background-color: var(--accent4-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--first-color); /* Цвет при наведении */
+  background-color: var(--accent1-color); /* Цвет при наведении */
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   
 .desktop-br {
   display: none;
@@ -883,29 +780,23 @@ nav {
 
 /* Основные стили */
 body {
-  font-size: 14px;
+  font-size: 0.88rem;
 }
 
 
 header{
-  width: 100%;
-  margin: 0 auto;
+  background-image: url('Images/Cover.png');
+  background-size: cover;      /* картинка масштабируется и заполняет блок */
+  background-position: center; /* центрируем картинку */
+  background-repeat: no-repeat;/* не повторяем картинку */
+  width: 100%;                 /* ширина блока (можно задать нужную) */
+  height: 100vh;               /* например, высота — весь экран */
 }
 
-.banner img{
-  width: 100%;
-}
-
-
-.offer {
-  position: absolute;
-  left: 57.14px;
-  top: 100px;
-}
 
 /* Логотип */
 .logo img {
-  width: 107.14px;
+  width: 6.70rem;
 }
 
 .links {
@@ -915,13 +806,13 @@ header{
 .link {
   position: relative;
   overflow: hidden;
-  padding: 2.29px 0;
+  padding: 0.14rem 0;
 }
 
 .linkline {
   position: absolute;
   display: block;
-  height: 1.43px;
+  height: 0.09rem;
 }
 
 .link:after {
@@ -930,8 +821,8 @@ header{
   bottom: 0;
   right: 0;
   width: 0%;
-  height: 0.71px;
-  background: var(--background-color);
+  height: 0.04rem;
+  background: var(--light-color);
   transition: all 0.30s cubic-bezier(.47,.17,.3,1);
 }
 
@@ -941,21 +832,21 @@ header{
 }
 
 .linkWhite {
-  margin-left: 34.29px;
+  margin-left: 2.14rem;
   position: relative;
   overflow: hidden;
-  padding: 5.71px 0;
+  padding: 0.36rem 0;
   cursor: pointer;
 }
 
 .linkWhite:after {
   content: "";
   position: absolute;
-  bottom: 7.86px;
+  bottom: 0.49rem;
   right: 0;
   width: 0%;
-  height: 1.43px;
-  background: var(--background-color);
+  height: 0.09rem;
+  background: var(--light-color);
   transition: all 0.3s cubic-bezier(.47,.17,.3,1);
 }
 
@@ -965,8 +856,8 @@ header{
 }
 
 .container {
-  background-color: var(--background-color);
-  margin: 50px auto;
+  background-color: var(--light-color);
+  margin: 3.12rem auto;
 }
 
 .narrative {
@@ -975,126 +866,106 @@ header{
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  max-width: 842.86px; /* Ширина сайта, чтобы не растягивалось */
-  margin: 0 auto; /* Центрирование */
-  box-sizing: border-box; /* Включение padding в ширину */
-}
-
-.under_container {
-  background-color: var(--background-color2);
-  margin: 40px auto;
-}
-
-.under_narrative {
-  position: relative;
-  background-color: var(--background-color2);
-  padding: 20px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  max-width: 842.86px; /* Ширина сайта, чтобы не растягивалось */
+  max-width: 52.68rem; /* Ширина сайта, чтобы не растягивалось */
   margin: 0 auto; /* Центрирование */
   box-sizing: border-box; /* Включение padding в ширину */
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 14.29px;
-  max-width: 857.14px;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 0.89rem;
+  max-width: 53.57rem;
   margin: 0 auto;
-  padding: 45px 0px;
+  padding: 2.81rem 0.00rem;
 }
 
 .question-container p {
-  font-size: 30px;
-  line-height: 100%;
+  font-size: 1.88rem;
+  line-height: 120%;
 }
 
 
 .card {
-  background: var(--background-color2);
-  padding: 30px;
+  background: var(--light-color);
+  padding: 1.88rem;
   transition: transform 0.3s ease;
   text-align: left;
 }
 
 .card:hover {
-  transform: translateY(-3.57px);
+  transform: translateY(-0.22rem);
 }
 
 .icon {
-  width: 42.86px;
+  width: 2.68rem;
 }
 
 .card h3 {
   font-family: 'm', sans-serif;
-  font-size: 14px;
-  margin: 7.14px 0;
-  color: var(--second-color);
+  font-size: 0.88rem;
+  margin: 0.45rem 0;
+  color: var(--accent-color);
 }
 
 .card p {
-  font-size: 18px;
-  color: var(--second-color);
-  line-height: 1.14;
+  font-size: 1.12rem;
+  color: var(--accent-color);
+  line-height: 120%;
 }
 
 .content {
   max-width: 100%;
   z-index: 2; /* Поверх фонового изображения */
-  padding: 30px;
+  padding: 1.88rem;
 }
 
 .text-slide {
-  padding: 7.14px 40px;
+  padding: 0.45rem 2.50rem;
   position: absolute;                  /* Абсолютное позиционирование */
-  bottom: 20px;                           /* Привязка к нижней границе */
+  bottom: 1.25rem;                           /* Привязка к нижней границе */
   left: 0;                             /* Привязка к левой стороне */
   width: 80%;                         /* Растягиваем на всю ширину */
 }
 
 .text-slide p {
   z-index: 2;
-  font-size: 14px;
+  font-size: 0.88rem;
   font-family: 'r', sans-serif;
-  line-height: 1.14;
+  line-height: 120%;
   text-align: left;
   z-index: 2; 
 }
 
 .part {
-  font-family: 'l', sans-serif;
-  font-size: 14px;
-  color: var(--second-color);
-  margin: 0 0 13.57px;
+  font-family: 'sb', sans-serif;
+  font-size: 0.88rem;
+  color: var(--accent-color);
+  margin: 0 0 0.85rem;
 }
 
 .title {
   font-family: 't', sans-serif;
-  font-size: 34px;
-  color: var(--first-color);
-  line-height: 1;
-  margin: 0 0 19.29px;
-  letter-spacing: 2.86px;
+  font-size: 2.12rem;
+  color: var(--dark-color);
+  line-height: 120%;
+  margin: 0 0 1.21rem;
 }
 
 .under_title{
   font-family: 't', sans-serif;
-  font-size: 29.29px;
-  color: var(--first-color);
-  line-height: 1;
-  margin: 0 0 19.29px;
-  letter-spacing: 1.43px;
+  font-size: 1.83rem;
+  color: var(--dark-color);
+  line-height: 120%;
+  margin: 0 0 1.21rem;
 }
 
 .description{
   font-family: 'l', sans-serif;
-  font-size: 18px;
-  color: var(--second-color);
-  line-height: 1.2;
-  margin: 0 0 10.71px;
+  font-size: 1.12rem;
+  color: var(--accent-color);
+  line-height: 120%;
+  margin: 0 0 0.67rem;
 }
 
 .background2 {
@@ -1108,18 +979,18 @@ header{
 }
 
 .postscriptum {
-  margin-top: 14.29px;
-  margin-left: 277.14px;
+  margin-top: 0.89rem;
+  margin-left: 17.32rem;
   font-family: 'l', sans-serif;
-  font-size: 14px;
-  color: var(--second-color);
-  line-height: 1.2;
+  font-size: 0.88rem;
+  color: var(--accent-color);
+  line-height: 120%;
 }
 
 .swiper {
   height: 50vh;
-  max-height: 578.57px;
-  max-width: 1440px;
+  max-height: 36.16rem;
+  max-width: 90.00rem;
 }
 
 .swiper-slide {
@@ -1156,9 +1027,9 @@ header{
 }
 
 .swiper-slide p {
-  font-size: 14px;
+  font-size: 0.88rem;
   position: relative;
-  color: var(--background-color);
+  color: var(--light-color);
 }
 
 /* --- Кастомизация пагинации Swiper --- */
@@ -1169,15 +1040,15 @@ header{
   align-items: center;
   width: 100%;
   z-index: 10;
-  margin-bottom: 35.71px;
+  margin-bottom: 2.23rem;
 }
 
 .swiper-pagination-bullet {
-  width: 16px !important; /* Размер кружков */
-  height: 16px !important;
+  width: 1.00rem !important; /* Размер кружков */
+  height: 1.00rem !important;
   background-color: rgba(0, 0, 0, 0.4) !important; /* Серый цвет */
   border-radius: 50% !important; /* Делаем их круглыми */
-  margin: 0 21.43px !important; /* Расстояние между кружками */
+  margin: 0 1.34rem !important; /* Расстояние между кружками */
   opacity: 0.7 !important; /* Прозрачность */
   transition: all 0.3s ease !important; /* Плавный переход эффектов */
 }
@@ -1190,14 +1061,14 @@ header{
 
 /* Стили для активного элемента */
 .swiper-pagination-bullet-active {
-  background-color: var(--background-color) !important; /* Белый цвет активной точки */
+  background-color: var(--light-color) !important; /* Белый цвет активной точки */
   transform: scale(1.2); /* Увеличение активного элемента */
   opacity: 1 !important; /* Полная непрозрачность */
 }
 
 /* Чтобы активная точка оставалась белой при наведении */
 .swiper-pagination-bullet-active:hover {
-  background-color: var(--background-color) !important; /* Оставляем белый цвет */
+  background-color: var(--light-color) !important; /* Оставляем белый цвет */
   transform: scale(1.2); /* Ещё большее увеличение при наведении */
 }
 
@@ -1209,51 +1080,15 @@ header{
 .options-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 0.88rem;
 }
 
 .option, .option2, .option3{
-  padding: 20px 20px;
-  padding-right: 40px;
-  gap: 14px;
+  padding: 1.25rem 1.25rem;
+  padding-right: 2.50rem;
+  gap: 0.88rem;
 }
 
-
-.quote1 {
-  font-family: 'l', sans-serif;
-  color: var(--first-color);
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 0;
-  align-items: center;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.quote {
-  font-family: 'l', sans-serif;
-  color: var(--second-color);
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 80px;
-  padding-top: 0;
-  align-items: center;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-
-
-.quote img {
-  width: 20px;
-  margin-right: 14px;
-}
 
 .offer {
   display: none;
@@ -1284,28 +1119,5 @@ header{
   display: block;
 }
 
-.quiz {
-  font-family: 'l', sans-serif;
-  color: var(--second-color);
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  /* padding-bottom: 20px; */
-  align-items: center;
-  flex-direction: column;
-}
-
-.quiz div {
-  display: flex;
-  justify-content: center;
-}
-
-.quiz img {
-  width: 46px;
-  margin: 14px;
-}
 
 }
