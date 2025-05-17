@@ -45,7 +45,7 @@
 
 :root{
   --first-color: #FFA90A;
-  --second-color: #1F2125;
+  --second-color: #004C97;
   --background-color: #fdfdfd;
   --background-color2: #F7F7F5;
 }
@@ -636,7 +636,7 @@ nav {
 }
 
 .correct, .correct2, .correct3 {
-  background: #28a745 !important;
+  background: #0081C9 !important;
 }
 
 .wrong, .wrong2, .wrong3 {
