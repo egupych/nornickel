@@ -2,6 +2,11 @@
 //Animation scroll to anchor
 //::::::::::::::::::::::::::::::::::::::::::::::::::
 
+function scroll_part0(options = { block: "start", inline: "nearest", behavior: "smooth" }) {
+    const part0 = document.querySelector('.part0');
+    part0.scrollIntoView(options);
+}
+
 function scroll_part1(options = { block: "start", inline: "nearest", behavior: "smooth" }) {
     const part1 = document.querySelector('.part1');
     part1.scrollIntoView(options);
@@ -20,6 +25,21 @@ function scroll_part3(options = { block: "start", inline: "nearest", behavior: "
 function scroll_part4(options = { block: "start", inline: "nearest", behavior: "smooth" }) {
     const part4 = document.querySelector('.part4');
     part4.scrollIntoView(options);
+}
+
+function scroll_part5(options = { block: "start", inline: "nearest", behavior: "smooth" }) {
+    const part5 = document.querySelector('.part5');
+    part5.scrollIntoView(options);
+}
+
+function scroll_part6(options = { block: "start", inline: "nearest", behavior: "smooth" }) {
+    const part6 = document.querySelector('.part6');
+    part6.scrollIntoView(options);
+}
+
+function scroll_part7(options = { block: "start", inline: "nearest", behavior: "smooth" }) {
+    const part7 = document.querySelector('.part7');
+    part7.scrollIntoView(options);
 }
 
 
