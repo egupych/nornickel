@@ -141,18 +141,34 @@ const observer = new IntersectionObserver((entries, observer) => {
 	observer.observe(card);
   });
   
-document.querySelectorAll('.accordion-title').forEach(title => {
-  title.addEventListener('click', () => {
-    const item = title.parentElement;
-    const isActive = item.classList.contains('active');
 
-    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
 
-    if (!isActive) {
-      item.classList.add('active');
-    }
+
+// аккрдеон
+const buttons = [
+  { btn: "btn1", cnt: "cnt1", arr: "arr1" },
+  { btn: "btn2", cnt: "cnt2", arr: "arr2" },
+  { btn: "btn3", cnt: "cnt3", arr: "arr3" }
+];
+
+buttons.forEach(({ btn, cnt, arr }, index) => {
+  document.getElementById(btn).addEventListener("click", () => {
+    buttons.forEach(({ btn: b, cnt: c, arr: a }, i) => {
+      const content = document.getElementById(c);
+      const arrow = document.getElementById(a);
+
+      if (i === index) {
+        const isVisible = content.style.display === "block";
+        content.style.display = isVisible ? "none" : "block";
+        arrow.innerText = isVisible ? "⬇" : "⬆";
+      } else {
+        content.style.display = "none";
+        document.getElementById(a).innerText = "⬇";
+      }
+    });
   });
 });
+
 
 
 // слайдер дат
@@ -214,3 +230,61 @@ function switchTab(tabId) {
 }
 
 
+
+
+
+// слайдер 3 фото 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".ucmnrtba-track");
+  const slides = document.querySelectorAll(".ucmnrtba-slide");
+  const prev = document.querySelector(".ucmnrtba-prev");
+  const next = document.querySelector(".ucmnrtba-next");
+  const dotsContainer = document.querySelector(".ucmnrtba-dots");
+
+  const slidesToShow = 3;
+  const totalSlides = slides.length;
+  const totalPages = Math.ceil(totalSlides / slidesToShow);
+  let currentPage = 0;
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth;
+    const offset = slideWidth * slidesToShow * currentPage;
+    track.style.transform = `translateX(-${offset}px)`;
+
+    document.querySelectorAll(".ucmnrtba-dots span").forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentPage);
+    });
+  }
+
+  function createDots() {
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement("span");
+      dot.classList.toggle("active", i === 0);
+      dot.addEventListener("click", () => {
+        currentPage = i;
+        updateSlider();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  prev.addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateSlider();
+    }
+  });
+
+  next.addEventListener("click", () => {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener("resize", updateSlider);
+
+  createDots();
+  updateSlider();
+});

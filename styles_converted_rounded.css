@@ -372,187 +372,59 @@ h3 {
   line-height: 120%;
 }
 
-.swiper {
-  height: 120vh;
-  max-height: 50.62rem;
-  max-width: 90.00rem;
 
-}
-
-
-.swiper-slide {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #f3f3f3;
-  background-size: cover;                 /* Растягивает картинку на всю область */
-  background-position: center;            /* Центрирует картинку */
-  background-repeat: no-repeat; 
-  cursor: grab;
-  transition: transform 0.3s ease-out;
-}
-
-.swiper-slide {
-  width: 100% !important;  /* Растягиваем слайд на всю ширину */
-  background-size: cover;   /* Покрытие всего блока изображением */
-  background-position: center;
-}
-
-.swiper-slide::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%; /* Высота затемнённой области */
-  background: linear-gradient(
-    to top, 
-    rgba(0, 0, 0, 0), /* Темнее у низа */
-    rgba(0, 0, 0, 0)    /* Прозрачно к верху */
-  );
-  pointer-events: none; /* Чтобы не мешало взаимодействию с текстом */
-}
-
-.swiper-slide:active {
-  cursor: grabbing;
-}
-
-.swiper-slide p {
-  font-size: 1.12rem;
-  position: relative;
-  color: var(--light-color);
-}
-
-/* --- Кастомизация пагинации Swiper --- */
-.swiper-pagination {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  z-index: 10;
-  margin-bottom: 3.12rem;
-}
-
-.swiper-pagination-bullet {
-  width: 1.00rem !important; /* Размер кружков */
-  height: 1.00rem !important;
-  background-color: rgba(0, 0, 0, 0.7) !important; /* Серый цвет */
-  border-radius: 50% !important; /* Делаем их круглыми */
-  margin: 0 1.25rem !important; /* Расстояние между кружками */
-  opacity: 0.7 !important; /* Прозрачность */
-  transition: all 0.3s ease !important; /* Плавный переход эффектов */
-}
-
-/* Увеличение и изменение цвета при наведении */
-.swiper-pagination-bullet:hover {
-  background-color: rgba(0, 0, 0, 0.9) !important; /* Белый цвет при наведении */
-  transform: scale(1.2); /* Увеличение */
-}
-
-/* Стили для активного элемента */
-.swiper-pagination-bullet-active {
-  background-color: var(--light-color) !important; /* Белый цвет активной точки */
-  transform: scale(1.2); /* Увеличение активного элемента */
-  opacity: 1 !important; /* Полная непрозрачность */
-  border: 0.06rem solid rgba(0, 0, 0, 0.7);
-}
-
-/* Чтобы активная точка оставалась белой при наведении */
-.swiper-pagination-bullet-active:hover {
-  background-color: var(--light-color) !important; /* Оставляем белый цвет */
-  transform: scale(1.2); /* Ещё большее увеличение при наведении */
-}
-
-/* Стиль для кнопок */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff !important; /* Белый цвет стрелок */
-  background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный чёрный фон */
-  border-radius: 50%; /* Скругление для создания круга */
-  width: 3.12rem !important; /* Ширина кнопки */
-  height: 3.12rem !important; /* Высота кнопки */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.5s ease;
-  margin-left: 8.12rem;
-  margin-right: 8.12rem;
-}
-
-/* Эффект при наведении */
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.5) !important; /* Сделать фон менее прозрачным при наведении */
-}
-
-/* Увеличиваем иконки стрелок */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 0.88rem !important; /* Размер стрелки */
-  font-weight: bold;
-}
 
 /* аккордеон */
-
-.accordion {
-  width: 68rem;
-  margin: 20px auto;
+.dksjeowi {
+  max-width: 800px;
+  margin: 30px auto;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.accordion-item {
-  background: #0084d1;
-  color: white;
-  margin-bottom: 10px;
-  border-radius: 12px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-
-}
-
-.accordion-title {
+.iwpqxzas {
+  background: #0082D1;
+  color: #fff;
   padding: 20px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-bottom: 1px solid #0070B3;
 }
 
-.accordion-title::after {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url('/Icons/accordion_arrow.svg'); /* или PNG, JPEG и т.д. */
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease;
+.iwpqxzas:hover {
+  background: #006bb0;
 }
 
-.accordion-item.active .accordion-title::after {
-  transform: rotate(180deg);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  background: white;
-  color: black;
-  transition: max-height 0.3s ease;
-  padding: 0 20px;
-  background-color: var(--gray-color);
-}
-
-.accordion-item.active .accordion-content {
-  max-height: 1000px;
+.qweruiop {
+  background: #ffffff;
+  color: #000;
   padding: 20px;
+  display: none;
+  font-size: 16px;
+  line-height: 1.5;
 }
+
+.arrow {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+
+
 
 .section {
   margin-bottom: 20px;
@@ -577,7 +449,7 @@ h3 {
 
 .galeriaHist-container {
   position: relative;
-  width: 800px;
+  width: 70rem;
   margin: 40px auto 0;
   overflow: hidden;
   border-radius: 8px;
@@ -733,6 +605,94 @@ h3 {
 .ejdrsqnv h2 {
   margin-top: 0;
 }
+
+
+/* слйдер 3 фото  */
+.ucmnrtba-slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.ucmnrtba-track-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.ucmnrtba-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.ucmnrtba-slide {
+  flex: 0 0 33.3333%;
+  padding: 0 6px;
+}
+
+.ucmnrtba-slide img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.ucmnrtba-arrow {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+.ucmnrtba-prev {
+  left: -18px;
+}
+
+.ucmnrtba-next {
+  right: -18px;
+}
+
+
+
+.ucmnrtba-dots {
+  text-align: center;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ucmnrtba-dots span {
+  display: inline-block;
+  width: 1.00rem; /* Размер кружков */
+  height: 1.00rem;
+  background-color: var(--darkgray-color); /* Серый цвет */
+  margin: 0 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease !important; /* Плавный переход эффектов */
+}
+
+.ucmnrtba-dots span:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important; /* Белый цвет при наведении */
+  transform: scale(1.2); /* Увеличение */
+}
+
+.ucmnrtba-dots span.active {
+  background-color: var(--accent1-color); /* Белый цвет активной точки */
+  transform: scale(1.2); /* Увеличение активного элемента */
+
+
+}
+
 
 
 @media (max-width: 768px) {
