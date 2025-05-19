@@ -159,6 +159,13 @@ h3 {
   color: var(--dark-color);
 }
 
+h2 {
+  font-family: 'r', sans-serif;
+  font-size: 1.2rem;
+  line-height: 100%;
+  color: var(--accent4-color);
+}
+
 .offer {
   display: flex;
   justify-content: center;
@@ -519,7 +526,7 @@ details[open] summary::before {
 
 
 
-
+h4
 
 .section {
   margin-bottom: 20px;
