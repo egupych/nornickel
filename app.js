@@ -141,6 +141,76 @@ const observer = new IntersectionObserver((entries, observer) => {
 	observer.observe(card);
   });
   
+document.querySelectorAll('.accordion-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const item = title.parentElement;
+    const isActive = item.classList.contains('active');
+
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+
+// слайдер дат
+
+
+const galeriaHistContainer = document.querySelector('.galeriaHist-container');
+const listaSlides = document.querySelector('.galeriaHist-lista-slides');
+const botoesCronograma = document.querySelectorAll('.galeriaHist-cronograma-item');
+const botaoEsquerdo = document.querySelector('.seta-esquerda');
+const botaoDireito = document.querySelector('.seta-direita');
+
+let indiceAtual = 0;
+const totalSlides = listaSlides.children.length;
+
+function mostrarSlide(novoIndice) {
+  if (novoIndice < 0) novoIndice = totalSlides - 1;
+  if (novoIndice >= totalSlides) novoIndice = 0;
+  indiceAtual = novoIndice;
+  
+  const deslocamento = -indiceAtual * 100;
+  listaSlides.style.transform = `translateX(${deslocamento}%)`;
+  
+  botoesCronograma.forEach(btn => btn.classList.remove('active'));
+  botoesCronograma[indiceAtual].classList.add('active');
+}
+
+// стрелки
+botaoEsquerdo.addEventListener('click', () => {
+  mostrarSlide(indiceAtual - 1);
+});
+botaoDireito.addEventListener('click', () => {
+  mostrarSlide(indiceAtual + 1);
+});
+
+// клик по дате
+botoesCronograma.forEach(botao => {
+  botao.addEventListener('click', () => {
+    const idx = parseInt(botao.dataset.indice, 10);
+    mostrarSlide(idx);
+  });
+});
+
+// инициализация
+mostrarSlide(0);
 
   
+
+
+
+function switchTab(tabId) {
+  // Снять активность со всех вкладок
+  document.querySelectorAll('.ziwunbke').forEach(tab => tab.classList.remove('active'));
+  document.querySelectorAll('.azkqwrny').forEach(content => content.classList.remove('active'));
+
+  // Назначить активную вкладку и контент
+  const index = ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'].indexOf(tabId);
+  document.querySelectorAll('.ziwunbke')[index].classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
 
