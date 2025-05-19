@@ -160,10 +160,10 @@ buttons.forEach(({ btn, cnt, arr }, index) => {
       if (i === index) {
         const isVisible = content.style.display === "block";
         content.style.display = isVisible ? "none" : "block";
-        arrow.innerText = isVisible ? "⬇" : "⬆";
+        arrow.innerText = isVisible ? "⯆" : "⯅";
       } else {
         content.style.display = "none";
-        document.getElementById(a).innerText = "⬇";
+        document.getElementById(a).innerText = "⯆";
       }
     });
   });
