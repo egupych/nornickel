@@ -425,6 +425,101 @@ h3 {
 
 
 
+/* ебаный слайдер 2 */
+.wmeofkzs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.xmqoefha {
+  text-align: center;
+  background: #fff;
+  border: 2px solid transparent;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 220px;
+  height: 220px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.xmqoefha.active {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.rhzvjqnm {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rhzvjqnm img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.kjdhxowq {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Общий стиль summary */
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 12px 0;
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+  color: #0056d2;
+}
+
+/* Стрелка */
+details summary::before {
+  content: "▶";
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  transition: transform 0.2s ease;
+}
+
+/* Поворот стрелки при открытии */
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.uhgfqzmn {
+  padding-left: 24px;
+  margin-top: 10px;
+}
+
+.ifuyzvng,
+.lxmczpoi {
+  color: #0056d2;
+}
+
+
+
+
+
 
 .section {
   margin-bottom: 20px;

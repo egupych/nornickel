@@ -288,3 +288,26 @@ document.addEventListener("DOMContentLoaded", function () {
   createDots();
   updateSlider();
 });
+
+
+
+
+
+// ебаный слайдер 2
+const cards3 = document.querySelectorAll('.xmqoefha');
+const sections = document.querySelectorAll('.kjdhxowq');
+
+cards3.forEach(card => {
+  card.addEventListener('click', () => {
+    const targetId = card.getAttribute('data-tab');
+
+    // Сброс активных карточек
+    cards3.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+
+    // Показ нужного блока
+    sections.forEach(section => {
+      section.style.display = section.id === targetId ? 'block' : 'none';
+    });
+  });
+});
