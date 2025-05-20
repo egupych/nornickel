@@ -58,7 +58,7 @@
   --accent4-color: #004C97;
   --dark-color:#1A1B25;
 
-  --light-gradient-color: linear-gradient(135deg, #ffffff, #ffffff57);
+  --light-gradient-color: linear-gradient(135deg, var(--light-color), #ffffff57);
   --dark-gradient-color: linear-gradient(135deg, #0963B7, #011856);
 
 }
@@ -225,7 +225,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto; /* Центрирование */
   box-sizing: border-box; /* Включение padding в ширину */
 }
@@ -240,7 +240,7 @@ h2 {
 
 
 .content {
-  max-width: 100%;
+  max-width: 90%;
   z-index: 2; /* Поверх фонового изображения */
 }
 
@@ -269,7 +269,7 @@ h2 {
 
 .header-description {
   font-family: 'r', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--accent-color);
   line-height: 130%;
 }
@@ -318,8 +318,7 @@ h2 {
 
 /* аккордеон */
 .dksjeowi {
-  max-width: 60rem;
-  max-width: 100%;
+  max-width: 90%;
   margin: 1.88rem auto;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -389,7 +388,7 @@ h2 {
 }
 
 .xmqoefha.active {
-  border-color: #007bff;
+  border-color: var(--accent4-color);
   box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
 }
 
@@ -403,13 +402,13 @@ h2 {
 }
 
 .rhzvjqnm img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 100%;
   object-fit: contain;
 }
 
 .kjdhxowq {
-  max-width: 63rem;
+  max-width: 90%;
   margin: 0 auto 3.13rem;
   background: #fff;
   border-radius: 1rem;
@@ -463,7 +462,7 @@ details[open] summary::before {
 .galeriaHist-container {
   position: relative;
   width: 70rem;
-  max-width: 100%;
+  max-width: 90%;
   margin: 2.5rem auto 0;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -496,7 +495,7 @@ details[open] summary::before {
   padding: 0.5rem 0.75rem;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 0.88rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
 }
 
@@ -508,7 +507,7 @@ details[open] summary::before {
   color: #fff;
   border: none;
   padding: 0.75rem 1rem;
-  font-size: 1.13rem;
+  font-size: 1rem;
   cursor: pointer;
   border-radius: 0.25rem;
   opacity: 0.8;
@@ -528,13 +527,13 @@ details[open] summary::before {
   display: flex;
   justify-content: space-between;
   width: 55rem;
-  max-width: 100%;
+  max-width: 90%;
   margin: 1.25rem auto;
 }
 .galeriaHist-cronograma-item {
   background: none;
   border: none;
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: #aaa;
   cursor: pointer;
   position: relative;
@@ -559,18 +558,18 @@ details[open] summary::before {
 
 
 .gklfpotn {
-  width: 70rem;
-  max-width: 100%;
+  max-width: 90%;
   overflow: hidden;
   border-radius: 0.75rem;
-  border: 0.12rem solid #d6e0eb;
-  background-color: #f8fbfd;
+  border: 0.12rem solid var(--accent2-color);
+  background-color: var(--accent2-color);
   margin: 0 auto;
 }
 
 .hdyqeuwp {
   display: flex;
-  border-bottom: 0.12rem solid #d6e0eb;
+  border-bottom: 0.12rem solid var(--accent2-color);
+  align-items: center;
 }
 
 .ziwunbke {
@@ -579,15 +578,15 @@ details[open] summary::before {
   padding: 0.88rem;
   cursor: pointer;
   font-weight: bold;
-  color: #0078d7;
+  color: var(--accent4-color);
   border-bottom: 0.12rem solid transparent;
   transition: background 0.3s, color 0.3s;
 }
 
 .ziwunbke.active {
-  background-color: #0078d7;
-  color: white;
-  border-bottom: 0.12rem solid #0078d7;
+  background-color: var(--accent4-color);
+  color: var(--accent2-color);
+  border-bottom: 0.12rem solid var(--accent4-color);
 }
 
 .azkqwrny {
@@ -609,7 +608,7 @@ details[open] summary::before {
 }
 
 .ghyrjznp {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 0.5rem;
 }
@@ -626,7 +625,7 @@ details[open] summary::before {
 /* слйдер 3 фото  */
 .ucmnrtba-slider {
   position: relative;
-  max-width: 75rem;
+  max-width: 90%;
   margin: 0 auto;
   padding: 1.25rem 0;
 }
@@ -698,7 +697,7 @@ details[open] summary::before {
 }
 
 .ucmnrtba-dots span:hover {
-  background-color: rgba(0, 0, 0, 0.9) !important; /* Белый цвет при наведении */
+  background-color: var(--dark-color) !important; /* Белый цвет при наведении */
   transform: scale(1.2); /* Увеличение */
 }
 
@@ -719,8 +718,7 @@ details[open] summary::before {
   align-items: center;
   flex-direction: column;
   background-color: var(--accent4-color);
-  width: 58rem;
-  max-width: 100%;
+  max-width: 90%;
   border-radius: 2.2rem;
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -763,7 +761,7 @@ details[open] summary::before {
   padding: 1.62rem 1.88rem;
   padding-right: 3.12rem;
   border-radius: 1.5rem 1.5rem 0rem 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--light-color);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -791,12 +789,12 @@ details[open] summary::before {
 .feedback-container{
   margin-top: 2.50rem;
   margin-bottom: 0.00rem;
-  font-size: 1.12rem;
+  font-size: 1rem;
   color: var(--light-color);
   font-family: "li", sans-serif;
   line-height: 120%;
   text-align: center;
-  max-width: 50rem;
+  max-width: 90%;
 }
 
 .correct, .correct2, .correct3 {
@@ -813,10 +811,10 @@ details[open] summary::before {
 .footer {
   color: var(--light-color);
   font-family: 'r', sans-serif;
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 120%;
   padding: 3.62rem 8.06rem;
-  max-width: 100%;
+  max-width: 90%;
   background-color: var(--accent4-color);
 }
 
@@ -824,7 +822,7 @@ details[open] summary::before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -835,7 +833,7 @@ details[open] summary::before {
 /* Разделительная линия */
 .footer__line {
   border-top: 0.06rem solid var(--light-color);
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -847,9 +845,9 @@ details[open] summary::before {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--light-color);
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
