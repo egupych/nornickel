@@ -60,7 +60,7 @@ a {
 
 
 html{
-  font-size: clamp(0.7rem, 2vw, 1rem); /* Устанавливаем размер шрифта */
+  font-size: clamp(0.7rem, 2vw, 1.1rem); /* Устанавливаем размер шрифта */
 }
 
 /* Основные стили */
@@ -69,7 +69,7 @@ body {
   padding: 0;
   font-family: 'r', sans-serif;
   background-color: var(--light-color);
-  font-size: 0.88rem;
+  font-size: 1rem;
 }
 
 
@@ -104,7 +104,7 @@ header{
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 nav {
-	font-size: 0.88rem;
+	font-size: 0.9rem;
   font-family: 'sb', sans-serif;
   color: var(--light-color);
 	height: 5.00rem;
@@ -208,13 +208,14 @@ h2 {
   margin: 5.00rem auto;
 }
 
-.narrative {
+.container_mini {
   position: relative;
   padding-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  width: 60%;
   max-width: 90%;
   margin: 0 auto; /* Центрирование */
   box-sizing: border-box; /* Включение padding в ширину */
@@ -308,7 +309,8 @@ h2 {
 
 /* аккордеон */
 .dksjeowi {
-  max-width: 90%;
+  width: 60%;
+  max-width: 100%;
   margin: 1.88rem auto;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -353,11 +355,14 @@ h2 {
 
 /* ебаный слайдер 2 */
 .wmeofkzs {
+
   display: flex;
   justify-content: center;
   gap: 1.88rem;
-  padding: 1.88rem;
+  padding-bottom: 1.88rem;
+  padding-top: 1.88rem;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .xmqoefha {
@@ -397,7 +402,8 @@ h2 {
 }
 
 .kjdhxowq {
-  max-width: 90%;
+  width: 60%;
+  max-width: 100%;
   margin: 0 auto 3.13rem;
   background: #fff;
   border-radius: 1rem;
@@ -409,7 +415,7 @@ h2 {
 details summary {
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.13rem;
+  font-size: 1rem;
   padding: 0.75rem 0;
   list-style: none;
   position: relative;
@@ -547,11 +553,12 @@ details[open] summary::before {
 
 
 .gklfpotn {
+  width: 60%;
   max-width: 90%;
   overflow: hidden;
   border-radius: 0.75rem;
   border: 0.12rem solid var(--accent2-color);
-  background-color: var(--accent2-color);
+  background-color: var(--light-color);
   margin: 0 auto;
 }
 
@@ -614,7 +621,8 @@ details[open] summary::before {
 /* слйдер 3 фото  */
 .ucmnrtba-slider {
   position: relative;
-  max-width: 90%;
+  width: 60%;
+  max-width:100%;
   margin: 0 auto;
   padding: 1.25rem 0;
 }
@@ -707,7 +715,8 @@ details[open] summary::before {
   align-items: center;
   flex-direction: column;
   background-color: var(--accent4-color);
-  max-width: 90%;
+  width: 60%;
+  max-width:  100%;
   border-radius: 2.2rem;
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -758,8 +767,7 @@ details[open] summary::before {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  min-width: 25rem;
-
+  max-width: 100%;
 }
 
 .option:hover {
@@ -783,7 +791,8 @@ details[open] summary::before {
   font-family: "li", sans-serif;
   line-height: 120%;
   text-align: center;
-  max-width: 90%;
+  width: 60%;
+  max-width: 100%;
 }
 
 .correct, .correct2, .correct3 {
@@ -803,7 +812,7 @@ details[open] summary::before {
   font-size: 1rem;
   line-height: 120%;
   padding: 3.62rem 8.06rem;
-  max-width: 90%;
+  max-width: 100%;
   background-color: var(--accent4-color);
 }
 
