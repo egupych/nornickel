@@ -176,16 +176,16 @@ h2 {
   max-width: 90%;
 }
 
+
+
 .offer{
   display: flex;
   flex-direction: column;
-  width: 60%;
   max-width: 90%;
 }
 
-.grid-text img {
-  width: 45%;
-  height: 30rem;
+.content img {
+  width: 100%;
 }
 
 /* Логотип */
@@ -198,7 +198,7 @@ h2 {
 	display: flex;
 	cursor: pointer;
   justify-content: space-between;
-  gap: 2.50rem;
+  gap: 1.8rem;
 }
 
 .link {
@@ -298,7 +298,7 @@ h2 {
 
 
 .container_img {
-  width: 100%;
+  width: auto;
   display: flex;
 }
 
@@ -378,7 +378,7 @@ h2 {
 
   display: flex;
   justify-content: center;
-  gap: 1.88rem;
+  gap: 1rem;
   padding-bottom: 1.88rem;
   padding-top: 1.88rem;
   flex-wrap: wrap;
@@ -422,12 +422,12 @@ h2 {
 }
 
 .kjdhxowq {
-  width: 60%;
+  width: 56%;
   max-width: 100%;
   margin: 0 auto 3.13rem;
   background: #fff;
   border-radius: 1rem;
-  padding: 1.88rem;
+  padding: 1.8rem;
   box-shadow: 0 0.13rem 0.5rem rgba(0,0,0,0.1);
 }
 
@@ -476,7 +476,7 @@ details[open] summary::before {
 
 .galeriaHist-container {
   position: relative;
-  width: 70rem;
+  width: 60%;
   max-width: 90%;
   margin: 2.5rem auto 0;
   overflow: hidden;
@@ -596,6 +596,7 @@ details[open] summary::before {
   font-weight: bold;
   color: var(--accent4-color);
   border-bottom: 0.12rem solid transparent;
+  font-size: 0.8rem;
 
 }
 
@@ -730,12 +731,15 @@ details[open] summary::before {
 
 .quiz-container {
   margin: 0 auto;
-  padding: 2.50rem;
+padding-top: 1.4rem;
+padding-bottom: 0.8rem;
+padding-left: 2.5rem;
+padding-right: 2.5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: var(--accent4-color);
-  width: 60%;
+  width: 54%;
   max-width:  100%;
   border-radius: 2.2rem;
   margin-top: 6rem;
@@ -829,9 +833,10 @@ details[open] summary::before {
 .footer {
   color: var(--light-color);
   font-family: 'r', sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 120%;
-  padding: 3.62rem 8.06rem;
+padding-top: 5rem;
+padding-bottom: 5rem;
   max-width: 100%;
   background-color: var(--accent4-color);
 }
@@ -840,7 +845,7 @@ details[open] summary::before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -851,7 +856,7 @@ details[open] summary::before {
 /* Разделительная линия */
 .footer__line {
   border-top: 0.06rem solid var(--light-color);
-  max-width: 90%;
+  max-width: 60%;
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -863,9 +868,9 @@ details[open] summary::before {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--light-color);
-  max-width: 90%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -894,4 +899,55 @@ details[open] summary::before {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent1-color); /* Цвет при наведении */
+}
+
+@media (max-width: 900px) {
+  
+
+header{
+  height: 60vh; 
+}
+
+.links {
+  display: none;
+}
+
+
+
+.offer p {
+  width: 90%;
+}
+
+.container_mini {
+  width: 90%;
+}
+
+.gklfpotn {
+  width: 90%;
+}
+
+.dksjeowi {
+  width: 90%;
+}
+
+.kjdhxowq {
+  width: 90%;
+}
+
+.ucmnrtba-slider
+ {
+    width: 90%;
+}
+
+.grid-text img {
+  display: none;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+}
+
+
 }
