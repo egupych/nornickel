@@ -96,6 +96,8 @@ header{
   background-repeat: no-repeat;/* не повторяем картинку */
   width: 100%;                 /* ширина блока (можно задать нужную) */
   height: 100vh;               /* например, высота — весь экран */
+  align-items: flex-start;
+
 }
 
 
@@ -107,7 +109,7 @@ nav {
 	font-size: 0.9rem;
   font-family: 'sb', sans-serif;
   color: var(--light-color);
-	height: 5.00rem;
+	height: 6.00rem;
 	z-index: 0;
 	display: flex;
 	align-items: center;
@@ -115,11 +117,13 @@ nav {
 	user-select: none;
   position: absolute;
   flex-wrap: wrap;
-  width: 70%;
+  width: 63%;
 }
 
 
 h1 {
+  margin: 0;
+  padding-top: 10rem;
   font-family: 'l', sans-serif;
   font-size: 7.50rem;
   line-height: 120%;
@@ -143,12 +147,6 @@ h2 {
   color: var(--accent4-color);
 }
 
-.offer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: -50rem;
-}
 
 .offer p {
   font-family: 'l', sans-serif;
@@ -158,6 +156,15 @@ h2 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 60%;
+  max-width: 90%;
+}
+
+.offer{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 90%;
 }
 
 .grid-text img {
@@ -209,7 +216,6 @@ h2 {
 }
 
 .container_mini {
-  position: relative;
   padding-bottom: 0;
   display: flex;
   align-items: center;
@@ -291,10 +297,8 @@ h2 {
 .arrow {
   width: 3rem;
   position: absolute;
-  left: 2rem;
   bottom: 2rem;
   opacity: 0.7;
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -604,7 +608,7 @@ details[open] summary::before {
 }
 
 .ghyrjznp {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
 }
