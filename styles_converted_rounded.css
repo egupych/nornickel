@@ -171,7 +171,7 @@ h2 {
 }
 
 .grid-text img {
-  width: 40.50rem;
+  width: 45%;
   height: 30rem;
 }
 
@@ -225,7 +225,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  max-width: 73.75rem; /* Ширина сайта, чтобы не растягивалось */
+  max-width: 100%;
   margin: 0 auto; /* Центрирование */
   box-sizing: border-box; /* Включение padding в ширину */
 }
@@ -319,6 +319,7 @@ h2 {
 /* аккордеон */
 .dksjeowi {
   max-width: 60rem;
+  max-width: 100%;
   margin: 1.88rem auto;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -462,6 +463,7 @@ details[open] summary::before {
 .galeriaHist-container {
   position: relative;
   width: 70rem;
+  max-width: 100%;
   margin: 2.5rem auto 0;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -526,6 +528,7 @@ details[open] summary::before {
   display: flex;
   justify-content: space-between;
   width: 55rem;
+  max-width: 100%;
   margin: 1.25rem auto;
 }
 .galeriaHist-cronograma-item {
@@ -557,6 +560,7 @@ details[open] summary::before {
 
 .gklfpotn {
   width: 70rem;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 0.75rem;
   border: 0.12rem solid #d6e0eb;
@@ -716,6 +720,7 @@ details[open] summary::before {
   flex-direction: column;
   background-color: var(--accent4-color);
   width: 58rem;
+  max-width: 100%;
   border-radius: 2.2rem;
   margin-top: 6rem;
   margin-bottom: 6rem;
