@@ -19,28 +19,18 @@
 }
 
 @font-face {
-  font-family: 'm';
-  src: url('HelveticaNeueCyr-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'mi';
-  src: url('HelveticaNeueCyr-MediumItalic.woff') format('woff');
-}
-
-@font-face {
   font-family: 'r';
-  src: url('/fonts/ProximaNova-Regular.woff') format('woff2');
+  src: url('/fonts/ProximaNova-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 't';
-  src: url('HelveticaNeueCyr-Thin.woff2') format('woff2');
+  src: url('/Fonts/ProximaNovaT-Thin.woff') format('woff2');
 }
 
 @font-face {
   font-family: 'ti';
-  src: url('HelveticaNeueCyr-ThinItalic.woff2') format('woff2');
+  src: url('/Fonts/ProximaNova-ThinIt.woff') format('woff2');
 }
 
 @font-face {
@@ -100,7 +90,7 @@ body {
 header{
   display: flex;
   justify-content: center;
-  background-image: url('Images/Cover.png');
+  background-image: url('images/сover.png');
   background-size: cover;      /* картинка масштабируется и заполняет блок */
   background-position: center; /* центрируем картинку */
   background-repeat: no-repeat;/* не повторяем картинку */
