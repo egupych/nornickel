@@ -334,7 +334,6 @@ h2 {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: background 0.3s;
   border-bottom: 0.12rem solid #0070B3;
 }
 
@@ -344,12 +343,8 @@ h2 {
 
 .qweruiop {
   background: var(--accent2-color);
-  color: #000;
-<<<<<<< Updated upstream
-  padding: 1.25rem;
-=======
+  color:  var(--dark-color);
   padding: 2rem;
->>>>>>> Stashed changes
   display: none;
   font-size: 1rem;
   line-height: 1.5;
@@ -551,7 +546,7 @@ details[open] summary::before {
   background: #ccc;
   border-radius: 50%;
   margin: 0.25rem auto 0;
-  transition: background 0.3s;
+
 }
 .galeriaHist-cronograma-item.active {
   color: #264071;
@@ -584,7 +579,7 @@ details[open] summary::before {
   font-weight: bold;
   color: var(--accent4-color);
   border-bottom: 0.12rem solid transparent;
-  transition: background 0.3s, color 0.3s;
+
 }
 
 .ziwunbke.active {
@@ -668,7 +663,7 @@ details[open] summary::before {
   cursor: pointer;
   z-index: 10;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
-  transition: background 0.3s;
+
 }
 
 .ucmnrtba-prev {
