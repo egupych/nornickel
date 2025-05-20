@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'sb';
-  src: url('/Fonts/ProximaNova-Semibold.woff') format('woff');
+  src: url('/fonts/ProximaNova-Semibold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'b';
-  src: url('/Fonts/ProximaNova-Bold.woff') format('woff2');
+  src: url('/fonts/ProximaNova-Bold.woff') format('woff2');
 }
 
 @font-face {
   font-family: 'l';
-  src: url('/Fonts/ProximaNova-Light.woff') format('woff');
+  src: url('/fonts/ProximaNova-Light.woff') format('woff');
 }
 
 @font-face {
   font-family: 'li';
-  src: url('/Fonts/ProximaNova-LightIt.woff') format('woff');
+  src: url('/fonts/ProximaNova-LightIt.woff') format('woff');
 }
 
 @font-face {
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: 'r';
-  src: url('/Fonts/ProximaNova-Regular.woff') format('woff2');
+  src: url('/fonts/ProximaNova-Regular.woff') format('woff2');
 }
 
 @font-face {
